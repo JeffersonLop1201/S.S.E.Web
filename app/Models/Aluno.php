@@ -23,5 +23,7 @@ class Aluno extends Model
         'email',
         'senha',
         'tipo_cartao',
+        'fk_tipo_cartao',
+        'genero',
     ];
 }
