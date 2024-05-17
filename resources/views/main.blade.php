@@ -17,8 +17,16 @@
     
 </head>
 <body>
+    @include('microInterações')
     <div class="cont">
         @include('modalPrincipal')
+        @include('modalCor')
+        @include('modalPessoas')
+        @include('head')
+        @include('botoes')
+        @include('containerUser')
+        @include('add_Aluno')
+        @include('myModal')
     </div>
 
     @include('calendar')
