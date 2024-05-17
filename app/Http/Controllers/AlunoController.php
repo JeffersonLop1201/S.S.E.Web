@@ -7,5 +7,7 @@ use App\Models\Aluno;
 
 class AlunoController extends Controller
 {
-
+    public function cadAluno(){
+        
+    }
 }
