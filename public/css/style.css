@@ -36,7 +36,7 @@ html {
   max-height: 100vh;
   top: 0 !important;
   right: 0 !important;
-  position: relative;
+  position: fixed;
 }
 
 /* body */
@@ -129,7 +129,7 @@ body {
 
 .head {
   width: 100%;
-  height: 100px;
+  height: 5vw;
   left: 0;
   border-bottom: 3px solid rgba(228, 213, 199, 0.20);
   display: flex;
@@ -139,9 +139,9 @@ body {
 }
 
 .logo-cont {
-  width: 200px;
-  height: 100%;
-  margin-left: 50px;
+  width: 11vw;
+  height: 5vw;
+  margin-left: 2vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -149,12 +149,12 @@ body {
 
 .logo-cont h1 {
   color: var(--primary-clr);
-  font-size: 2rem;
+  font-size: 1.8vw;
   font-weight: bolder;
 }
 
 .logo-cont img {
-  height: 80%;
+  height: 3.5vw;
 }
 
 .section-user {
@@ -325,12 +325,11 @@ body {
   left: 0;
   top: 0;
   z-index: 100;
-  height: 50px;
-  width: 100px;
+  height: 100%;
+  width: 5vw;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding: 20px;
+  justify-content: center;
 }
 
 /* Estilos para o ícone de usuário de login */
@@ -340,8 +339,8 @@ body {
   left: 0;
   top: 0;
   z-index: 100;
-  height: 50px;
-  width: 50px;
+  height: 3vw;
+  width: 3vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -627,7 +626,8 @@ body {
 }
 
 .cont-modal-user-dados {
-  background-color: blue;
+  background-color: white;
+  overflow: hidden;
 }
 
 .cont-modal-user-carteirinha {
@@ -1526,48 +1526,45 @@ input:focus {
 .container {
   position: relative;
   width: 20vw;
-  min-height: 100vh;
-  margin: 0 auto;
-  padding: 5px;
+  height: 100vh !important;
   color: #fff;
   display: flex;
-  right: 0;
+  right: 0 !important;
+  top: 0 !important;
   border-radius: 10px;
   flex-direction: column;
   border-left: 3px solid rgba(228, 213, 199, 0.20);
-  padding-top: 50px;
 }
 
 
 /* left:  a parte de cima do container onde fica o calendario */
 .left {
   width: 100%;
-  padding: 10px;
-  padding-top: 0;
 }
 
 /* calendar:  calendario */
 .calendar {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 25vw;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   color: #878895;
   top: 0;
   border-radius: 5px;
+  top: 0 !important;
 }
 
 /* month: mês */
 .calendar .month {
   width: 100%;
-  height: 65px;
+  height: 3vw;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-  padding: 0 50px;
-  font-size: 1.2rem;
+  padding: 0 2.3vw;
+  font-size: 1.2vw;
   font-weight: 500;
   text-transform: capitalize;
 }
@@ -1585,16 +1582,16 @@ input:focus {
 /* weekdays: semanas */
 .calendar .weekdays {
   width: 100%;
-  height: 50px;
+  height: 2.5vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
-  font-size: 0.7rem;
+  padding: 0 .6vw;
+  font-size: 0.7vw;
   font-weight: 600;
   text-transform: capitalize;
   color: var(--primary-clr);
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.1vw;
 }
 
 /* weekdays div: dia das semanas */
@@ -1614,8 +1611,8 @@ input:focus {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  font-size: 1.1rem;
+  padding: 0 .6vw;
+  font-size: .8vw;
   font-weight: 500;
 }
 
@@ -1634,13 +1631,13 @@ input:focus {
 /* day: dias separadamente */
 .calendar .days .day {
   width: 14.28%;
-  height: 43px;
+  height: 2.5vw;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   color: var(--primary-clr);
-  margin-bottom: 10px;
+  margin-bottom: .5vw;
   z-index: 1000;
 }
 
@@ -1716,9 +1713,9 @@ input:focus {
   position: absolute;
   bottom: 10%;
   left: 50%;
-  width: 7px;
-  height: 7px;
-  border-radius: 30px;
+  width: .4vw;
+  height: .4vw;
+  border-radius: 100%;
   transform: translateX(-50%);
   background-color: var(--primary-clr);
   z-index: 1500;
@@ -1732,38 +1729,34 @@ input:focus {
   background-color: #fff;
   bottom: 10%;
 }
-
+.goto{
+  display: none;
+}
 .calendar .goto-today {
   width: 100%;
-  height: 50px;
+  height: 3vw;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 5px;
-  padding: 0 20px;
-  margin-bottom: 20px;
+  padding: 0 1vw;
   color: var(--primary-clr);
+  position: absolute;
+  top: 23vw;
 }
 
-.calendar .goto {
-  display: none;
-}
 
-.calendar .goto-today .goto button {
-  border: none;
-  border-left: 1px solid var(--primary-clr);
-  border-radius: 0;
-  transition: 4s ease-in linear;
-}
+
 
 .calendar .goto-today button {
-  padding: 5px 10px;
-  border: 1px solid var(--primary-clr);
-  border-radius: 5px;
+  border: .16vw solid var(--primary-clr);
+  border-radius: .4vw;
   background-color: transparent;
   cursor: pointer;
   color: var(--primary-clr);
   transition: 4s ease-in linear;
+  width: 4vw;
+  height: 1.5vw;
+  font-size: .7vw;
 }
 
 .calendar .goto-today button:hover {
@@ -1774,50 +1767,54 @@ input:focus {
 
 /* right:  parte de baixo do calendario, onde aparecerá os lembretes */
 .container .right {
-  position: relative;
+  position: absolute;
   width: 100%;
-  min-height: 300px;
+  height: 17vw !important;
+  bottom: 0 !important;
 }
 
-.right .today-date {
+.today-date {
   width: 100%;
-  height: 40px;
+  height: 3vw;
+  padding: 0 0vw;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 35px;
-  padding-left: 50px;
-  margin-bottom: 20px;
+  justify-content: flex-start;
   text-transform: capitalize;
 }
 
-.right .today-date .event-day {
+.today-date .event-day {
   color: #1C5845;
-  font-size: 2rem;
+  font-size: 1.5vw;
   font-weight: 500;
+  margin-right: 1vw;
 }
 
-.right .today-date .event-date {
-  font-size: 1rem;
+.today-date .event-date {
+  font-size: .6vw;
   font-weight: 400;
   color: #878895;
+  height: 2vw;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: .3vw;
+  justify-content: center;
 }
 
 /* events:  o conteiner onde ficará quardada os dados do lembrete, onde aparecerá os lembretes */
 .events {
   width: 100%;
-  height: 100%;
-  max-height: 250px;
+  height: 14vw;
+  max-height: 14vw;
   overflow-x: hidden;
   overflow-y: auto;
-  margin-top: -20px;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 1vw;
 }
 
 .events::-webkit-scrollbar {
@@ -1827,45 +1824,42 @@ input:focus {
 /* add-event:  o botão de adicionar os lembretes */
 .add-event {
   position: absolute;
-  bottom: -65px;
-  right: 10px;
-  width: 40px;
-  height: 40px;
+  width: 2vw;
+  height: 2vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
-  color: #878895;
-  border: 2px solid #878895;
-  opacity: 0.5;
+  font-size: 1vw;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: .6vw;
+  color: var(--primary-clr);
+  border: 2px solid var(--primary-clr);
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
 }
 
-.add-event:hover {
-  opacity: 1;
-}
 
 .add-event i {
-  pointer-events: none;
+  pointer-events: none;                                              /* anotado */
 }
 
 /* events .event:  o conteiner onde ficará o lembrete, onde terá o titulo e os horários */
 .events .event {
   position: relative;
   width: 100%;
-  min-height: 80px;
-  max-height: 80px;
+  min-height: 4vw;
+  max-height: 4vw;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: #236C56;
+  background-color: var(--primary-clr);
   cursor: pointer;
-  border-radius: 10px;
-  border: 4px solid #174738;
-  margin-bottom: 10px;
-  z-index: 11111;
+  border-radius: .6vw;
+  border: .3vw solid #174738;
+  margin-bottom: 1vw;
+  z-index: 11;
 }
 
 .events .event .cont-color {
@@ -1887,13 +1881,11 @@ input:focus {
   width: 60%;
   height: 80%;
   background-color: darkcyan;
-  border-top: 4px solid #174738;
-  border-right: 4px solid #174738;
-  border-bottom: 4px solid #174738;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-top: .3vw solid #174738;
+  border-right: .3vw solid #174738;
+  border-bottom: .3vw solid #174738;
+  border-top-right-radius: .6vw;
+  border-bottom-right-radius: .6vw;
 }
 
 .events .event .cont-principal {
@@ -1908,16 +1900,16 @@ input:focus {
 }
 
 .events .event .event-title {
-  margin-left: 10px;
+  margin-left: 1vw;
   width: 100%;
-  margin-top: 10px;
+  margin-top: .3vw;
   overflow: hidden;
   position: relative;
 }
 
 .events .event .event-title h1 {
   color: #eee;
-  font-size: 1.4rem;
+  font-size: 1.4vw;
   font-weight: 800;
   white-space: nowrap;
   overflow: hidden;
@@ -1933,16 +1925,16 @@ input:focus {
 }
 
 .events .event .event-time {
-  margin-left: 10px;
+  margin-left: 1vw;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: .3vw;
 }
 
 .events .event .event-time p {
   color: #eee;
-  font-size: .8rem;
+  font-size: .6vw;
   font-weight: 700;
-  letter-spacing: .15rem;
+  letter-spacing: .15vw;
 }
 
 .events .event .left-confg {
@@ -1953,10 +1945,10 @@ input:focus {
 }
 
 .events .event .cont-config {
-  border-radius: 0px 4px 0px 100%;
+  border-radius: 0px .2vw 0px 100%;
   background-color: #174738;
-  height: 60px;
-  width: 60px;
+  height: 3vw;
+  width: 3vw;
   float: right;
   display: flex;
   align-items: start;
@@ -1966,8 +1958,8 @@ input:focus {
 .events .event .cont-config i {
   width: auto;
   color: #eee;
-  margin: 10px 10px;
-  font-size: 26px;
+  margin: .3vw .5vw;
+  font-size: 1.5vw;
   font-family: "Poppins", sans-serif;
 }
 
@@ -1975,8 +1967,8 @@ input:focus {
 
 /* no-event:  quando não houver eventos */
 .events .no-event {
-  width: 100%;
-  height: 250px;
+  width: 90%;
+  height: 16vw;
   display: flex;
   align-items: center;
   justify-content: center;

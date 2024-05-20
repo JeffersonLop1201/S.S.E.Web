@@ -277,8 +277,6 @@ function updateEvents(date) {
       event.events.forEach((event) => {
         const colorStyle = `background-color: ${event.color};`;
         events += `
-                ;
-
         <div class="event">
 	        <div class="cont-color">
 		        <div class="color-select-event" style="${colorStyle}"></div>

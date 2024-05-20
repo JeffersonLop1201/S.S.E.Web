@@ -28,17 +28,17 @@
             <div class="goto">
                 <input type="text" placeholder="mm/yyyy" class="date-input" />
                 <button class="goto-btn">Go</button>
-            </div>
+            </div><div class="today-date">
+        <div class="event-day">Seg</div>
+        <div class="event-date">12 de dezembro de 2022</div>
+    </div>
             <button class="today-btn">Hoje</button>
         </div>
     </div>
 </div>
 <!-- Lado direito: eventos e adicionar evento -->
 <div class="right">
-    <div class="today-date">
-        <div class="event-day">Seg</div>
-        <div class="event-date">12 de dezembro de 2022</div>
-    </div>
+    
     <div class="events"></div>
     <button class="add-event">
         <i class="fas fa-plus"></i>
