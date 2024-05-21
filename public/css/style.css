@@ -618,6 +618,9 @@ body {
   width: 100%;
   height: calc(100% - 250px);
   z-index: 10111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-screen.active {
@@ -632,6 +635,8 @@ body {
 
 .cont-modal-user-carteirinha {
   background-color: yellow;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .cont-modal-user-chat {
@@ -639,7 +644,7 @@ body {
 }
 
 .cont-modal-user-responsavel {
-  background-color: green;
+  background-color: white;
 }
 
 .cont-modal-inicio {
@@ -2251,6 +2256,117 @@ input:focus {
 }
 
 
+
+.cont-dados {
+  height: 90%;
+  width: 95%;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+
+
+
+
 .cont-dados{
-  
+  height: 90%;
+  width: 95%;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.cont-0{
+  width: auto;
+  height: 2vw;
+  display: flex;
+  flex-direction: row;  
+  position: absolute;
+  right: 0 !important;
+  padding: 10px;
+}
+.cont-0 h3{
+  width: auto;
+  font-weight: 800;
+  font-size: 18px;
+}
+.cont-0 .cont-id{
+  width: auto;
+}
+.cont-0 .cont-id p{
+  font-weight: 800;
+  font-size: 18px;
+  margin-left: 3px;
+}
+.oi{
+  margin-bottom: 10px;
+  width: auto;
+  padding: 10px 0;
+  border-bottom: 3px solid var(--primary-clr);
+}
+.cont-10{
+  border: none;
+}
+.oi h3{
+  margin-bottom: 5px;
+  color: var(--primary-clr);
+}
+.oi ~ p{
+  color: #333;
+}
+.card-cont{
+  width: 50%;
+  height: 100%;
+  position: relative;
+  left: 0vw;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.card-all{
+  width: 100%;
+  height: 16vw;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 1.5vw;
+}
+.card{
+  width: 80%;
+  height: 12vw;
+  background-color: var(--primary-clr);
+  border-radius: .5vw;
+  z-index: 150150;
+}
+.fund-1{
+  position: absolute;
+  width: 70%;
+  height: 12vw;
+  background-color: #54937A;
+  top: .8vw;
+
+  border-radius: .5vw;
+  z-index: 3;
+}
+.fund-2{
+  position: absolute;
+  width: 60%;
+  height: 12vw;
+  background-color: #74A38F;
+  top: 1.3vw;
+  z-index: 2;
+  border-radius: .5vw;
+}
+.fund-3{
+  position: absolute;
+  width: 50%;
+  height: 12vw;
+  background-color: #8DB1A2;
+  top: 1.8vw;
+  z-index: 1;
+  border-radius: .5vw;
 }
