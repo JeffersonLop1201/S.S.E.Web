@@ -120,7 +120,7 @@ function fillAddUserList(users = allUsers) {
   users.forEach((user) => {
     const listItem = document.createElement("li");
     listItem.textContent = `${user.icon} ${user.name}`;
-    listItem.classList.add("user-item");
+    listItem.classList.add("user-items");
     listItem.addEventListener("click", () => {
       // Aqui vamos chamar a função toggleSelectUser e passar o usuário e o elemento clicado
       toggleSelectUser(user, listItem);
@@ -559,25 +559,57 @@ function removeUserFromSelected(userId) {
 }
 
 // Função para alternar a seleção de um usuário
-function toggleSelectUser(user, divElement) {
+function toggleSelectUser(user, element) {
   const index = selectedUsers.findIndex((u) => u.id === user.id);
   const myModal = document.getElementById("myModal");
+  const addUserElement = document.querySelector("#add-user ul");
+
   if (index === -1) {
     selectedUsers.push(user);
     saveSelectedUsers(selectedUsers);
-    divElement.classList.add("selected");
+    element.classList.add("selected");
     myModal.style.display = "flex";
     addUserToSelected(user);
-    addUserToWrapper(user);
+    addUserToWrapper(user, addUserElement);
   } else {
     selectedUsers.splice(index, 1);
     saveSelectedUsers(selectedUsers);
-    divElement.classList.remove("selected");
+    element.classList.remove("selected");
     myModal.style.display = "none";
     removeUserFromSelected(user.id);
-    removeUserFromWrapper(user.id);
+    removeUserFromWrapper(user.id, addUserElement);
   }
 }
+
+// Funções auxiliares para manipulação de elementos
+function addUserToWrapper(user, addUserElement) {
+  const userItem = document.createElement("li");
+  userItem.classList.add("user-item");
+  userItem.textContent = user.name; // Supondo que o objeto user tenha uma propriedade name
+  userItem.dataset.userId = user.id; // Adiciona um atributo de dados com o ID do usuário
+  addUserElement.appendChild(userItem);
+}
+
+function removeUserFromWrapper(userId, addUserElement) {
+  const userItem = addUserElement.querySelector(`.user-item[data-user-id="${userId}"]`);
+  if (userItem) {
+    addUserElement.removeChild(userItem);
+  }
+}
+
+// Funções mockup para salvar e remover usuários selecionados
+function saveSelectedUsers(users) {
+  console.log("Usuarios salvos:", users);
+}
+
+function addUserToSelected(user) {
+  console.log("Usuario adicionado:", user);
+}
+
+function removeUserFromSelected(userId) {
+  console.log("Usuario removido:", userId);
+}
+
 
 // Função para fechar o modal
 function closeUserModal(modalId) {

@@ -1972,14 +1972,12 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-top: 10px;
+  margin-top: -3vw;
 }
 
 /* no-event img:  img que vc aparecer quando não tiver evento */
 .events .no-event img {
-  width: 250px;
+  width: 70%;
   height: auto;
 }
 
@@ -2250,4 +2248,9 @@ input:focus {
 
 .confirm-delete-box button.delete-no:hover {
   background-color: #2980b9;
+}
+
+
+.cont-dados{
+  
 }
