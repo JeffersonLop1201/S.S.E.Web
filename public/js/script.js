@@ -120,7 +120,7 @@ function fillAddUserList(users = allUsers) {
   users.forEach((user) => {
     const listItem = document.createElement("li");
     listItem.textContent = `${user.icon} ${user.name}`;
-    listItem.classList.add("user-items");
+    listItem.classList.add("user-item");
     listItem.addEventListener("click", () => {
       // Aqui vamos chamar a função toggleSelectUser e passar o usuário e o elemento clicado
       toggleSelectUser(user, listItem);

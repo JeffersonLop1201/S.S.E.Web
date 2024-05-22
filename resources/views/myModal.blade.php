@@ -86,16 +86,43 @@
                     </div>
                 </div>
                 <div class="cont-10 oi">
-                    <h3>Carteirinha:</h3>
+                    
                     <div class="cont-carteirinha">
+                        <h3>Carteirinha:</h3>
                         <div class="card-cont">
-                <div class="card-all">
-                <div class="card"></div>
-                <div class="fund-1"></div>
-                <div class="fund-2"></div>
-                <div class="fund-3"></div>
+                            <div class="card-all">
+                                <div class="card">
+                                    <img src="/img/Logo.png" alt="" class="img-logo-card">
+                                    <img src="/img/Polygon 27.png" alt="" class="poligonos-img-card1">
+                                    <img src="/img/Polygon 27.png" alt="" class="poligonos-img-card2">
+                                    <img src="/img/Polygon 27.png" alt="" class="poligonos-img-card3">
+                                    <img src="/img/Polygon 27.png" alt="" class="poligonos-img-card4">
+                                    <img src="/img/Polygon 27.png" alt="" class="poligonos-img-card5">
+                                    <img src="/img/Polygon 27.png" alt="" class="poligonos-img-card6">
+                                    <h1>123456 - 1</h1>
+                                </div>
+                            </div>
+                        </div> 
+                    <div class="dados_card-carterinha">
+                    <div class="cont-itens-cart">
+                        <h3>ID do Cartão:</h3>
+                        <div class="cont-itens-cart-tx">
+                           <p>123456 - 1</p>
+                        </div>
                     </div>
-                </div>
+                    <div class="cont-itens-cart">
+                        <h3>Tipo do Cartão:</h3>
+                        <div class="cont-itens-cart-tx">
+                            <p>estudantil</p>
+                        </div>
+                    </div>
+                    <div class="cont-itens-cart">
+                        <h3>RM:</h3>
+                        <div class="cont-itens-cart-tx">
+                            <p>23047</p>
+                        </div>
+                    </div>
+                        </div>
                 </div>
             </div>
             </div>

@@ -2309,6 +2309,8 @@ input:focus {
 }
 .cont-10{
   border: none;
+  flex-direction: row;
+  position: relative;
 }
 .oi h3{
   margin-bottom: 5px;
@@ -2324,10 +2326,9 @@ input:focus {
   left: 0vw;
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
 }
 .card-all{
-  width: 100%;
+  width: 80%;
   height: 16vw;
   position: relative;
   display: flex;
@@ -2336,37 +2337,110 @@ input:focus {
   margin-top: 1.5vw;
 }
 .card{
-  width: 80%;
+  width: 100%;
   height: 12vw;
   background-color: var(--primary-clr);
   border-radius: .5vw;
   z-index: 150150;
+  position: relative;
+  overflow: hidden;
 }
-.fund-1{
-  position: absolute;
-  width: 70%;
-  height: 12vw;
-  background-color: #54937A;
-  top: .8vw;
+.img-logo-card{
+  width: 4vw;
+  margin: 1vw;
+  z-index: 12000000;
+}
 
-  border-radius: .5vw;
-  z-index: 3;
-}
-.fund-2{
+.poligonos-img-card1{
+  width: 4vw;
   position: absolute;
-  width: 60%;
-  height: 12vw;
-  background-color: #74A38F;
-  top: 1.3vw;
+  top: -1vw;
+  left: -1vw;
+  z-index: -1;
+}
+
+.poligonos-img-card2{
+  width: 5vw;
+  position: absolute;
+  left: 5vw;
+  top: 2vw;
   z-index: 2;
-  border-radius: .5vw;
 }
-.fund-3{
+
+.poligonos-img-card3{
+  width: 6vw;
   position: absolute;
+  bottom: -2vw;
+  right: -2vw;
+  z-index: 2;
+}
+
+.poligonos-img-card4{
+  width: 4vw;
+  position: absolute;
+  bottom: 1vw;
+  left: -2vw;
+  z-index: 2;
+}
+
+.poligonos-img-card5{
+  width: 5vw;
+  position: absolute;
+  bottom: 6vw;
+  right: 3vw;
+  z-index: 2;
+}
+
+.poligonos-img-card6{
+  width: 6vw;
+  position: absolute;
+  bottom: -2vw;
+  right: 8vw;
+  z-index: 2;
+}
+
+.card h1{
+  font-size: 1.2vw;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.801);
+  position: absolute;
+  bottom: 1vw;
+  right: 1vw;
+  z-index: 150;
+}
+
+.dados_card-carterinha{
   width: 50%;
-  height: 12vw;
-  background-color: #8DB1A2;
-  top: 1.8vw;
-  z-index: 1;
-  border-radius: .5vw;
+  height: 70%;
+  position: absolute;
+  right: 0vw;
+  display: flex;
+  justify-content: space-between;
+  top: 2vw;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.cont-itens-cart{
+  width: 100%;
+  height: 5vw;
+  border-radius: .4vw;
+}
+
+.cont-itens-cart-tx{
+  width: 90%;
+  height: 2.5vw;
+  background-color: var(--primary-clr);
+  border-radius: .4vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: start;
+}
+.cont-itens-cart-tx p{
+  color: white;
+  font-size: 1vw;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-left: 1vw;
 }
