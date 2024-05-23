@@ -1049,6 +1049,10 @@ window.addEventListener("load", function () {
 });
 
 
+document.getElementById('telefone').addEventListener('input', function (e) {
+  let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+  e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+});
 
 
 
@@ -1095,7 +1099,35 @@ window.addEventListener("load", function () {
 
 
 
+function toggleSelection(buttonClicked) {
+  const buttons = document.querySelectorAll('.btm-1, .btm-2');
+  const btmGroup = document.querySelector('.btm-group');
+  const efTrazBtm = document.querySelectorAll('.ef_traz-btm');
+  const btm1 = document.querySelector('.btm-1');
+  const btm2 = document.querySelector('.btm-2');
+  const btmUnic = document.querySelector('.btm-unic');
 
+  // Remove a classe 'selected' de todos os botões
+  buttons.forEach(button => button.classList.remove('selected'));
 
+  // Adiciona a classe 'selected' apenas ao botão clicado
+  buttonClicked.classList.add('selected');
 
+  // Remove a classe 'active' de todos os ef_traz-btm
+  efTrazBtm.forEach(efTraz => efTraz.classList.remove('active'));
 
+  // Adiciona a classe 'active' ao ef_traz-btm correspondente
+  if (buttonClicked.classList.contains('btm-1')) {
+    btmGroup.classList.remove('selected-bg');
+    efTrazBtm[0].classList.add('active');
+    efTrazBtm[1].classList.remove('active');
+    btm2.classList.remove('selected');
+    btmUnic.classList.add('selected-bg');
+  } else if (buttonClicked.classList.contains('btm-2')) {
+    btmGroup.classList.add('selected-bg');
+    efTrazBtm[0].classList.remove('active');
+    efTrazBtm[1].classList.add('active');
+    btm1.classList.remove('selected');
+    btmUnic.classList.remove('selected-bg');
+  }
+}
